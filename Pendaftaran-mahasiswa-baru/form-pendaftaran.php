@@ -42,7 +42,6 @@
                     <select name="thn">
                         <option value="">Thn</option>
                         <?php
-                            // Kita loop mundur aja biar tahun baru di atas
                             for ($i = 2005; $i >= 1980; $i--) {
                                 echo "<option value='$i'>$i</option>";
                             }
