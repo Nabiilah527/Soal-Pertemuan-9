@@ -7,7 +7,6 @@
     <hr>
 
 <?php
-    // Ambil semua data dari form
     $nama = $_POST['nama'];
     $tempat_lahir = $_POST['tempat_lahir'];
     $tgl = $_POST['tgl'];
@@ -18,10 +17,8 @@
     $sekolah = $_POST['asal_sekolah'];
     $uan = $_POST['nilai_uan'];
 
-    // Gabungkan tanggal lahir sesuai format TGL-BLN-THN
     $tanggal_lahir_lengkap = $tgl . "-" . $bln . "-" . $thn;
 
-    // Tampilkan output sesuai permintaan dosen
     echo "Terimakasih <b>" . $nama . "</b> sudah mengisi form pendaftaran.";
     
     echo "<h3>Data Anda:</h3>";
