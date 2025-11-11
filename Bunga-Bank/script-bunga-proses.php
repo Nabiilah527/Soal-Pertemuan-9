@@ -7,23 +7,13 @@
     <hr>
     
 <?php
-    // 1. Ambil data dari $_POST
     $saldoAwal = $_POST['saldo_awal'];
-    $bungaPersen = $_POST['bunga']; // User input misal: 0.25
+    $bungaPersen = $_POST['bunga'];
     $bulan = $_POST['bulan'];
-    
-    // 2. Konversi bunga dari persen ke desimal
-    //    Ini penting! Kemarin 0.0025, user inputnya 0.25
     $bungaDesimal = $bungaPersen / 100;
-    
-    // 3. Hitung total bunga (Logika sama persis kayak kemarin)
-    //    Ingat, bunganya "dari saldo awal" (bunga flat, bukan compound)
     $totalBunga = ($saldoAwal * $bungaDesimal) * $bulan;
-    
-    // 4. Hitung saldo akhir
     $saldoAkhir = $saldoAwal + $totalBunga;
 
-    // 5. Tampilkan hasilnya
     echo "<p>Berikut adalah hasil perhitungan Anda:</p>";
     echo "<table>";
     echo "<tr><td>Saldo Awal</td><td>: Rp. " . number_format($saldoAwal) . "</td></tr>";
